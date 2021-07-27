@@ -73,7 +73,8 @@ export class Dragster {
 
     removeListeners() {
         this.el.removeEventListener("dragenter", this.dragenter, false)
-        return this.el.removeEventListener("dragleave", this.dragleave, false)
+        this.el.removeEventListener("dragleave", this.dragleave, false)
+        return this.el.removeEventListener("drop", this.dragleave, false)
     }
 
     // Must call after drop or a second drop to the same target sometimes gets missed
