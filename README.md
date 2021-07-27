@@ -29,7 +29,9 @@ Dragster if you'd like better cross browser support.
 
 ## Setup
 
-Just include Dragster in your app, then register your dropzone elements with
+Meant to be vendored (file cloned directly in your project's working directy) and compiled by your Typescript compilation process (whatever that may be.)
+
+Then just include Dragster in your app, then register your dropzone elements with
 Dragster so they can start emitting `dragster:` events.
 
 ```javascript
