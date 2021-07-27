@@ -4,7 +4,7 @@ export class Dragster {
     destroy: () => void
     first: boolean
     second: boolean
-    customEvent: CustomEvent<any> | undefined
+    customEvent: CustomEvent | undefined
 
     constructor(public el: HTMLElement) {
 
@@ -38,7 +38,7 @@ export class Dragster {
         Dragster.dragsters[el.id].reset()
     }
 
-    dragenter(event: any) {
+    dragenter(event: DragEvent) {
         event.preventDefault()
         if (this.first) {
             this.second = true
@@ -53,7 +53,7 @@ export class Dragster {
         }
     }
 
-    dragleave(event: any) {
+    dragleave(event: DragEvent) {
         if (this.second) {
             this.second = false
         } else if (this.first) {
