@@ -34,7 +34,7 @@ Dragster so they can start emitting `dragster:` events.
 
 ```javascript
 const dropzone = document.getElementById("my-dropzone");
-dragster = new Dragster(dropzone);
+const dragster = new Dragster(dropzone);
 ```
 
 Then you can add some plain old event listeners without pulling your hair out.
