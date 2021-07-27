@@ -16,6 +16,7 @@ export class Dragster {
 
         this.el.addEventListener("dragenter", this.dragenter, false)
         this.el.addEventListener("dragleave", this.dragleave, false)
+        this.el.addEventListener("drop", this.dragleave, false)
 
         this.destroy = this._destroy.bind(this)
 
