@@ -45,7 +45,7 @@ export class Dragster {
         } else {
             this.first = true
             this.customEvent = document.createEvent("CustomEvent")
-            this.customEvent.initCustomEvent("dragster-enter", true, true, {
+            this.customEvent.initCustomEvent("dragster:enter", true, true, {
                 dataTransfer: event.dataTransfer,
                 sourceEvent: event
             })
@@ -62,7 +62,7 @@ export class Dragster {
 
         if (!this.first && !this.second) {
             this.customEvent = document.createEvent("CustomEvent")
-            this.customEvent.initCustomEvent("dragster-leave", true, true, {
+            this.customEvent.initCustomEvent("dragster:leave", true, true, {
                 dataTransfer: event.dataTransfer,
                 sourceEvent: event
             })
